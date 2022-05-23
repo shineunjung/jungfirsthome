@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 꾸미기</title>
+    <style>
+        input[type=text]{
+            color: red;
+            border: 1px solid gray;
+            border-radius: 2px;
+        }
+        label{
+            color: black
+        }
+        label:hover{
+           color: blueviolet;
+        }
+        input[type=text]:focus{
+            font-size: 120%;
+        }
+        #forName:focus{
+            font-size: 120%;
+        }
+        input:hover{
+            background-color: aliceblue;
+        }
+        @keyframes tcolor {
+            0%{color: red;}
+            50%{color: green;}
+            100%{color: blue;}
+        }
+        @keyframes bomb{
+            0%{font-size: 500%;}
+            100%{font-size: 100%;}
+        }
+        #tform {
+            animation-name: tcolor;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        #tgmim:hover{
+            animation-name: bomb;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <h3><span id="tform">폼</span><span id="tgmim"> 꾸미기</span></h3>
+    <hr>
+    <form action="">
+       <p> <label for="name" id="forName">Name:</label>
+        <input type="text" id="name" placeholder="Michael Hwang"></p>
+
+        <p></p><label for="name" id="forName">Email:</label>
+        <input type="text" id="name" placeholder="elvis.com"></p>
+
+        <label for="name" id="forName">Comment:</label>
+        <input type="text" id="name" placeholder="메시지를 남겨주세요">
+        
+    </form>
+</body>
+</html>
